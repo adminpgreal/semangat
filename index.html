@@ -3,12 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>Semangat Puasa</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 35px 45px;
+            border-radius: 20px;
+            text-align: center;
+            color: #fff;
+            animation: fadeIn 2s ease forwards;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeUp 2s ease forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Animasi bintang */
+        .star {
+            position: absolute;
+            color: rgba(255,255,255,0.8);
+            animation: twinkle 3s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%,100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+    </style>
 </head>
-<body style="text-align:center; font-family:Arial;">
-    <h1>🌙 Semangat Berpuasa!</h1>
-    <p>
-        Tetap kuat menahan lapar dan dahaga.<br>
-        Setiap sabar adalah pahala, setiap doa adalah harapan 🤍
-    </p>
+<body>
+
+    <div class="star" style="top:20%; left:15%;">✨</div>
+    <div class="star" style="top:30%; left:80%;">🌙</div>
+    <div class="star" style="top:70%; left:25%;">✨</div>
+    <div class="star" style="top:60%; left:75%;">✨</div>
+
+    <div class="card">
+        <h1>🌙 Semangat Berpuasa</h1>
+        <p>
+            Lapar dan dahaga hanyalah sementara.<br>
+            Kesabaran hari ini,<br>
+            pahala berlipat di kemudian hari 🤍
+        </p>
+    </div>
+
 </body>
 </html>
